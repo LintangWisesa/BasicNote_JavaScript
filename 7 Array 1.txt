@@ -1,0 +1,26 @@
+
+var nama = ['Andi', 'Budi', 'Caca'];
+var tahun = new Array(1990, 1991, 1992);
+
+console.log(nama);     //output=['Andi','Budi','Caca']
+console.log(nama[0]);  //index 0, output = Andi
+console.log(nama[1]);  //index 1, output = Budi
+console.log(nama[2]);  //index 2, output = Caca
+console.log(nama.length);  //panjang array = 3
+
+nama[2] = 'Bambang';   //value mutation!
+console.log(nama[2]);  //index 2, output = Bambang
+
+=========================================================
+
+var andi = ['Pria', 1960, 'Duda'];
+
+andi.push('Guru');    //nambah 1 elemen akhir array
+andi.pop();           //hapus 1 elemen akhir array
+
+andi.unshift('Tuan'); //nambah 1 elemen awal array
+andi.shift();         //hapus 1 elemen awal array
+
+andi.indexOf('Pria'); //lihat no.index 'Pria' dlm array
+                      //jika tiada dlm array, output = -1
+		      //dpt diaplikasikan u/ fitur Pencarian

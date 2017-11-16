@@ -1,0 +1,26 @@
+
+Primitive (non object) js data type:
+1. Number: integer / float
+2. String: kumpulan char, text
+3. Boolean: logic data type, true/false
+4. undefined: variabel yg blm pny value
+5. null: non exist
+
+=========================================
+
+var nama = 'Andi';
+console.log(nama);
+
+var usia = 22;
+console.log(usia);
+
+var jomblo = true;
+console.log(jomblo);
+
+console.log(typeof(jomblo));      //lihat datatype
+
+console.log(usia + usia); //output: 44, datatype: Number
+
+console.log(nama + usia); //output: Andi22, datatype: String
+			  //type coersion: saat gabungin 2 variabel yg beda tipe, 
+			  //js akan konvert ke String!

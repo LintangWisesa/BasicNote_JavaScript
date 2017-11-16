@@ -1,0 +1,42 @@
+
+var andi = {
+	nama: 'Andi',
+	lahir: 1990,
+	job: guru
+};
+
+=================================================
+
+*** GET THE VALUE FROM AN OBJECT ***
+
+console.log(andi);         // Object {nama: 'Andi', lahir: 1990, job: guru}
+
+console.log(andi.nama);    // output = Andi
+
+console.log(andi['nama']); // output = Andi
+
+var xyz = 'job';
+console.log(andi[xyz]);    // output = guru
+
+=================================================
+
+*** VALUE MUTATION OF AN OBJECT ***
+
+andi.lahir = 1992;
+andi['job'] = 'Programmer';
+console.log(andi);
+
+// output lahir & job akan berubah!
+
+=================================================
+
+*** ANOTHER WAY TO WRITE AN OBJECT ***
+
+var andi = new Object();
+andi.nama = 'Andi';
+andi.lahir = 1992;
+andi['job'] = 'guru'
+
+console.log(andi);
+
+

@@ -1,0 +1,163 @@
+
+In JavaScript, almost "everything" is an object.
+
+Booleans can be objects (if defined with the new keyword)
+Numbers can be objects (if defined with the new keyword)
+Strings can be objects (if defined with the new keyword)
+Dates are always objects
+Maths are always objects
+Regular expressions are always objects
+Arrays are always objects
+Functions are always objects
+Objects are always objects
+All JavaScript values, except primitives, are objects.
+
+=============
+
+JavaScript Primitives
+A primitive value is a value that has no properties or methods.
+
+A primitive data type is data that has a primitive value.
+
+JavaScript defines 5 types of primitive data types:
+
+string
+number
+boolean
+null
+undefined
+Primitive values are immutable (they are hardcoded and therefore cannot be changed).
+
+================
+
+Objects are Variables Containing Variables
+JavaScript variables can contain single values:
+
+var person = "John Doe";
+
+Objects are variables too. But objects can contain many values.
+The values are written as name : value pairs (name and value separated by a colon).
+* A JavaScript object is a collection of named values
+
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+===============
+
+Object Methods
+Methods are actions that can be performed on objects.
+Object properties can be both primitive values, other objects, and functions.
+An object method is an object property containing a function definition.
+
+Property	Value
+firstName	John
+lastName	Doe
+age	        50
+eyeColor	blue
+fullName	function() {return this.firstName + " " + this.lastName;}
+
+JavaScript objects are containers for named values, called properties and methods.
+
+=================
+
+Creating a JavaScript Object
+With JavaScript, you can define and create your own objects.
+
+There are different ways to create new objects:
+
+Define and create a single object, using an object literal.
+Define and create a single object, with the keyword new.
+Define an object constructor, and then create objects of the constructed type.
+In ECMAScript 5, an object can also be created with the function Object.create().
+
+================
+
+1
+Using an Object Literal
+This is the easiest way to create a JavaScript Object.
+Using an object literal, you both define and create an object in one statement.
+
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+var person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:50,
+    eyeColor:"blue"
+};
+
+=================
+
+2
+Using the JavaScript Keyword new
+The following example also creates a new JavaScript object with four properties:
+
+var person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+
+==================
+
+3
+Using an Object Constructor
+The examples above are limited in many situations. They only create a single object.
+Sometimes we like to have an "object type" that can be used to create many objects of one type.
+The standard way to create an "object type" is to use an object constructor function:
+
+function person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+var myFather = new person("John", "Doe", 50, "blue");
+var myMother = new person("Sally", "Rally", 48, "green");
+
+
+=======================
+
+The this Keyword
+In JavaScript, the thing called this, is the object that "owns" the JavaScript code.
+The value of this, when used in a function, is the object that "owns" the function.
+The value of this, when used in an object, is the object itself.
+The this keyword in an object constructor does not have a value. It is only a substitute for the new object.
+The value of this will become the new object when the constructor is used to create an object.
+
+========================
+
+Built-in JavaScript Constructors
+JavaScript has built-in constructors for native objects:
+
+var x1 = new Object();    // A new Object object
+var x2 = new String();    // A new String object
+var x3 = new Number();    // A new Number object
+var x4 = new Boolean();   // A new Boolean object
+var x5 = new Array();     // A new Array object
+var x6 = new RegExp();    // A new RegExp object
+var x7 = new Function();  // A new Function object
+var x8 = new Date();      // A new Date object
+
+* The Math() object is not in the list. Math is a global object. The new keyword cannot be used on Math.
+
+======================
+
+JavaScript Objects are Mutable
+Objects are mutable: They are addressed by reference, not by value.
+
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+var x = person;
+x.age = 10;           // This will change both x.age and person.age
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+
+
+var job, kawin;     //deklarasi var tanpa value
+
+console.log(job);   //output: undefined
+console.log(kawin); //output: undefined
+
+job = 'guru';       //deklarasi value dari var job
+kawin = false;      //deklarasi value dari var kawin
+
+console.log(job + ' ' + kawin);
+
+
+================================================
+
+
+var kabar = prompt('Apakabs?');  //muncul kotak dialog utk diisi
+
+console.log(kabar);              //tampilkan di console apa yg user isikan
+
+alert(kabar);                    //tampilkan di alert window, input dr user

@@ -1,0 +1,82 @@
+
+JavaScript Properties
+Properties are the values associated with a JavaScript object.
+A JavaScript object is a collection of unordered properties.
+Properties can usually be changed, added, and deleted, but some are read only.
+
+=================
+
+Accessing JavaScript Properties
+The syntax for accessing the property of an object is:
+
+objectName.property          // person.age
+
+or
+
+objectName["property"]       // person["age"]
+
+or
+
+objectName[expression]       // x = "age"; person[x]
+
+======= tuladha
+
+var person = {
+    firstname:"John",
+    lastname:"Doe",
+    age:50,
+    eyecolor:"blue"
+};
+
+person.firstname + " is " + person.age + " years old.";
+
+person["firstname"] + " is " + person["age"] + " years old.";
+
+
+====================
+
+Adding New Properties
+
+person.nationality = "English";
+
+=====================
+
+Deleting Properties
+
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+delete person.age;   
+
+// or delete person["age"];
+
+=================
+
+Property Attributes
+All properties have a name. In addition they also have a value.
+
+The value is one of the property's attributes.
+
+Other attributes are: enumerable, configurable, and writable.
+
+These attributes define how the property can be accessed (is it readable?, is it writable?)
+
+In JavaScript, all attributes can be read, but only the value attribute can be changed (and only if the property is writable).
+
+( ECMAScript 5 has methods for both getting and setting all property attributes)
+
+Prototype Properties
+JavaScript objects inherit the properties of their prototype.
+
+The delete keyword does not delete inherited properties, but if you delete a prototype property, it will affect all objects inherited from the prototype.
+
+
+
+
+
+
+
+
+
+
+
+
+

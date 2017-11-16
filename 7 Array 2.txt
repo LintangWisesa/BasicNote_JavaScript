@@ -1,0 +1,225 @@
+
+
+let car1 = 'Saab';
+let car2 = 'Volvo';
+let car3 = 'BMW';
+
+let cars = ['Saab', 'Volvo', 'BMW'];
+
+let cars = [
+    'Saab',
+    'Volvo',
+    'BMW'
+];
+
+=========================================================
+
+Access the Elements of an Array
+
+let name = cars[0];
+
+cars[0] = 'Opel';
+
+========================================================
+
+Arrays are Objects
+Arrays are a special type of objects. The typeof operator in JavaScript returns 'object' for arrays.
+But, JavaScript arrays are best described as arrays.
+
+let person = ['John', 'Doe', 46];
+
+Objects use names to access its 'members'. In this example, person.firstName returns John:
+
+let person = {firstName:'John', lastName:'Doe', age:46};
+
+========================================================
+
+Array Properties and Methods
+
+let x = cars.length;   // The length property returns the number of elements
+let y = cars.sort();   // The sort() method sorts arrays
+
+=========================================================
+
+Looping Array Elements
+
+let buah, text, fLen, i;
+buah = ['Banana', 'Orange', 'Apple', 'Mango'];
+fLen = buah.length;
+text = '<ul>';
+for (i = 0; i < fLen; i++) {
+    text += '<li>' + buah[i] + '</li>';
+}
+
+=========================================================
+
+Associative Arrays
+Many programming languages support arrays with named indexes.
+Arrays with named indexes are called associative arrays (or hashes).
+JavaScript does not support arrays with named indexes.
+In JavaScript, arrays always use numbered indexes
+
+let person = [];
+person[0] = 'John';
+person[1] = 'Doe';
+person[2] = 46;
+let x = person.length;         // person.length will return 3
+let y = person[0];             // person[0] will return 'John'
+
+==========================================================
+
+The Difference Between Arrays and Objects
+In JavaScript, arrays use numbered indexes.  
+In JavaScript, objects use named indexes.
+
+When to Use Arrays. When to use Objects.
+JavaScript does not support associative arrays.
+You should use objects when you want the element names to be strings (text).
+You should use arrays when you want the element names to be numbers.
+
+========================================================
+
+Adding Array Elements
+
+let buah = ['Banana', 'Orange', 'Apple', 'Mango'];
+buah.push('Lemon');   
+
+let buah = ['Banana', 'Orange', 'Apple', 'Mango'];
+buah[buah.length] = 'Lemon';     // adds a new element (Lemon) to buah
+
+let buah = ['Banana', 'Orange', 'Apple', 'Mango'];
+buah[6] = 'Lemon';   
+
+========================================================
+
+let buah = ['Banana', 'Orange', 'Apple', 'Mango'];
+
+buah.toString();
+buah.join(' * ');
+
+buah.pop();  
+buah.push('Kiwi'); 
+buah.shift();
+buah.unshift('Lemon');
+ 
+buah[0] = 'Kiwi';
+buah[buah.length] = 'Kiwi'; 
+delete buah[0];
+
+buah.splice(2, 0, 'Lemon', 'Kiwi');
+buah.splice(0, 1); 
+
+=========================================================
+
+Merging (Concatenating) Arrays
+
+Merging Two Arrays
+
+let myGirls = ['Cecilie', 'Lone'];
+let myBoys = ['Emil', 'Tobias','Linus'];
+let myChildren = myGirls.concat(myBoys); 
+
+Merging 3 Arrays
+
+let arr1 = ['Cecilie', 'Lone'];
+let arr2 = ['Emil', 'Tobias','Linus'];
+let arr3 = ['Robin', 'Morgan'];
+let myChildren = arr1.concat(arr2, arr3); 
+
+=========================================================
+
+Slicing an Array
+
+let buah = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+let citrus = buah.slice(1);
+
+let buah = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+let citrus = buah.slice(3);
+
+let buah = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+let citrus = buah.slice(1, 3);
+
+let buah = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+let citrus = buah.slice(2);
+
+===========================================================
+
+JavaScript Sorting Arrays
+
+let buah = ['Banana', 'Orange', 'Apple', 'Mango'];
+buah.sort();            // Sorts the elements of buah
+
+===========================================================
+
+Reversing an Array
+The reverse() method reverses the elements in an array.
+You can use it to sort an array in descending order:
+
+let buah = ['Banana', 'Orange', 'Apple', 'Mango'];
+buah.sort();            // Sorts the elements of buah 
+buah.reverse();         // Reverses the order of the elements
+
+============================================================
+
+Numeric Sort
+
+By default, the sort() function sorts values as strings.
+This works well for strings ('Apple' comes before 'Banana').
+However, if numbers are sorted as strings, '25' is bigger than '100', because '2' is bigger than '1'.
+Because of this, the sort() method will produce incorrect result when sorting numbers.
+You can fix this by providing a compare function:
+
+
+let points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+
+=============================================================
+
+Find the Highest (or Lowest) Array Value
+
+There are no built-in functions for finding the max or min value in an array.
+However, after you have sorted an array, you can use the index to obtain the highest and lowest values.
+Sorting Ascending:
+
+let points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+// now points[0] contains the lowest value
+// and points[points.length-1] contains the highest value
+
+Sorting Descending:
+
+let points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return b - a});
+// now points[0] contains the highest value
+// and points[points.length-1] contains the lowest value
+
+===============================================================
+
+Using Math.max() on an Array
+You can use Math.max.apply to find the highest number in an array:
+
+let points = [40, 100, 1, 5, 25, 10];
+function myArrayMax(arr) {
+    return Math.max.apply(null, arr);
+}
+
+Using Math.min() on an Array
+You can use Math.min.apply to find the lowest number in an array:
+
+let points = [40, 100, 1, 5, 25, 10];
+function myArrayMin(arr) {
+    return Math.min.apply(null, arr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

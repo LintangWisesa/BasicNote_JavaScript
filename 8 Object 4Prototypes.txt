@@ -1,0 +1,121 @@
+
+Every JavaScript object has a prototype. The prototype is also an object.
+
+All JavaScript objects inherit their properties and methods from their prototype.
+
+JavaScript Prototypes
+All JavaScript objects inherit the properties and methods from their prototype.
+
+Objects created using an object literal, or with new Object(), inherit from a prototype called Object.prototype.
+
+Objects created with new Date() inherit the Date.prototype.
+
+The Object.prototype is on the top of the prototype chain.
+
+All JavaScript objects (Date, Array, RegExp, Function, ....) inherit from the Object.prototype.
+
+
+========================
+
+Creating a Prototype
+The standard way to create an object prototype is to use an object constructor function:
+
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+}
+
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+The constructor function is the prototype for Person objects.
+It is considered good practice to name constructor function with an upper-case first letter.
+
+===============
+
+Adding Properties and Methods to Objects
+Sometimes you want to add new properties (or methods) to an existing object.
+
+Sometimes you want to add new properties (or methods) to all existing objects of a given type.
+
+Sometimes you want to add new properties (or methods) to an object prototype.
+
+============================
+
+1 Adding a Property to an Object
+Adding a new property to an existing object is easy:
+
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+myFather.nationality = "English";
+
+============================
+
+2 Adding a Method to an Object
+Adding a new method to an existing object is also easy:
+
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+myFather.name = function() {
+    return this.firstName + " " + this.lastName;
+};
+
+=============================
+
+Adding Properties to a Prototype
+
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.nationality = "English";
+}
+
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+=============================
+
+Adding Methods to a Prototype
+
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.name = function() {
+        return this.firstName + " " + this.lastName
+    };
+}
+
+var myFather = new Person("John", "Doe", 50, "blue");
+
+===========================
+
+
+
+
+
+
+
+
+

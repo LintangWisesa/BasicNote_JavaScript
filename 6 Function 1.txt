@@ -1,0 +1,27 @@
+
+// function namaFunction(parameter) {program}
+
+
+function hitungUsia(tahunLahir) {
+	var usia = 2017 - tahunLahir;
+	return usia;
+}
+
+var usiaAndi = hitungUsia(1990);
+console.log(usiaAndi);
+
+
+=====================================
+
+function hitungUsia(tahunLahir) {
+	var usia = 2017 - tahunLahir;
+	return usia;
+}
+
+function tahunPensiun(nama, thLahir) {
+	var usia = hitungUsia(thLahir);
+	var pensiun = 55 - usia;
+	console.log(pensiun);
+}
+
+tahunPensiun('Andi', 1970);

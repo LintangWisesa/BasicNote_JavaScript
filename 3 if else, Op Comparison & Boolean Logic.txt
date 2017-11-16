@@ -1,0 +1,49 @@
+
+// if (condition) {program}
+
+var usia = 17;
+
+if (usia > 20) {
+   console.log('Sudah nikah?');
+} 
+
+else {
+   console.log('Kuliah & kerja yang bener!');
+}
+
+//output = Kuliah & kerja yang bener!
+
+============================================
+
+var jomblo = true;
+
+if (jomblo) {
+   console.log('Masih jomblo!');
+} 
+
+else {
+   console.log('Sudah taken!');
+}
+
+//output = Belum Nikah
+
+============================================
+
+ ==  : value sama, tapi datatype beda
+ === : value & datatype sama
+ >
+ <
+ >=
+ <=
+
+============================================
+
+ && : and (keduanya benar, maka TRUE) 
+ || : or  (salah satu benar, maka TRUE)
+ !  : not (membalik logika TRUE/FALSE)
+
+
+
+
+
+

@@ -1,0 +1,256 @@
+
+// 1 datar vertikal
+
+let z='';
+
+for (let i=0;i<5;i++){
+        z += ' * ' + '\n'
+}
+
+console.log(z)
+
+===============================================
+
+// 1 garis datar horizontal
+
+let z='';
+
+for (let i=0;i<5;i++){
+        z += ' * '
+    }
+    z += '\n'
+}
+
+console.log(z)
+
+===================== atau ====================
+
+// 1 garis datar horizontal
+
+let z='';
+
+for (let i=0;i<5;i++){
+        z += ' * '
+}
+
+console.log(z)
+
+===============================================
+
+// kotak 5x5
+
+let z='';
+    
+for (let i=0;i<5;i++){
+	for (let j=0;j<5;j++){
+            z += ' * '
+        }
+        z += '\n'
+    }
+    
+console.log(z)
+
+===============================================
+
+// segitiga siku2 >
+
+var y ='';
+
+for(let x=0; x<5; x++){
+        console.log(y += ' * ');
+    }
+
+=================== atau ======================
+
+// segitiga siku2 >
+
+var y='';
+
+for(let x=5; x>0; x--){
+        console.log(y += ' * ');
+    }
+
+=================== atau =======================
+
+// segitiga siku2 >
+
+var y='';
+
+for(let i=0; i<6; i++){
+    for(let j=0; j<i; j++){
+    y += ' * ';
+    }
+    y += '\n';
+}
+
+console.log(y);
+
+================================================
+
+// segitiga siku2 > kebalik atas-bawah
+
+var y='';
+
+for(let i=5; i>0; i--){
+    for(let j=0; j<i; j++){
+    y += ' * ';
+    }
+    y += '\n';
+}
+
+console.log(y);
+
+
+================================================
+
+// huruf K - segitiga atas + bawah
+
+var y='';
+var z='';
+
+for(let i=5; i>1; i--){
+    for(let j=0; j<i; j++){
+    y += ' * ';
+    }
+    if(i==2){y+=''}
+    else{y += '\n';}
+}
+
+for(let a=1; a<6; a++){
+    for(let s=0; s<a; s++){
+    z += ' * ';
+    }
+    z += '\n';
+}
+
+console.log(y);
+console.log(z);
+
+================================================
+
+// piramida 5 tinkat
+
+const space = function (spc) {
+	if(spc === 0) {
+		return "";}
+		return " " +space (spc-1);
+	};
+	const star = function (str){
+		if (str === 0) {
+			return "";}
+			return "*" + star(str-1);
+		};
+		const run = function (n,spc,str) {
+			if(n===0) {
+				return " ";}
+				console.log(space(spc)+star(str))
+			run(n-1,spc-1,str+2);
+		}
+		const trianglestars = function(n)
+		{
+			run(n,n-1,1)
+		};
+		trianglestars(5);
+
+// piramida 10 tinkat
+
+const space = function (spc) {
+	if(spc === 0) {
+		return " ";}
+		return "   " +space (spc-1);
+	};
+	const star = function (str){
+		if (str === 0) {
+			return " ";}
+			return " * " + star(str-1);
+		};
+		const run = function (n,spc,str) {
+			if(n===0) {
+				return "  ";}
+				console.log(space(spc)+star(str))
+			run(n-1,spc-1,str+2);
+		}
+		const trianglestars = function(n)
+		{
+			run(n,n-1,1)
+		};
+		trianglestars(10);
+
+
+===============================================================
+
+// piramida terbalik
+
+console.log('\n')
+const space = function (spc) {
+	if(spc === 9) {
+		return " ";}
+		return "   " +space (spc+1);
+	};
+	const star = function (str){
+		if (str === 20) {
+			return " ";}
+			return " * " + star(str+1);
+		};
+		const run = function (n,spc,str) {
+			if(n===0) {
+				return "  ";}
+				console.log(space(spc)+star(str))
+			run(n-1,spc-1,str+2);
+		}
+		const trianglestars = function(n)
+		{
+			run(n,n-1,1)
+		};
+		trianglestars(10);
+
+===============================================================
+
+// diamond
+
+const space = function (spc) {
+	if(spc === 0) {
+		return " ";}
+		return "   " +space (spc-1);
+	};
+	const star = function (str){
+		if (str === 0) {
+			return " ";}
+			return " * " + star(str-1);
+		};
+		const run = function (n,spc,str) {
+			if(n===0) {
+				return "  ";}
+				console.log(space(spc)+star(str))
+			run(n-1,spc-1,str+2);
+		}
+		const trianglestars = function(n)
+		{
+			run(n,n-1,1)
+		};
+		trianglestars(5);
+
+        
+        const space2 = function (spc2) {
+            if(spc2 === 4) {
+                return " ";}
+                return "   " +space2 (spc2+1);
+            };
+            const star2 = function (str2){
+                if (str2 === 10) {
+                    return " ";}
+                    return " * " + star2(str2+1);
+                };
+                const run2 = function (n2,spc2,str2) {
+                    if(n2===0) {
+                        return "  ";}
+                        console.log(space2(spc2)+star2(str2))
+                    run2(n2-1,spc2-1,str2+2);
+                }
+                const trianglestars2 = function(n2)
+                {
+                    run2(n2,n2-1,1)
+                };
+                trianglestars2(5);
+
+

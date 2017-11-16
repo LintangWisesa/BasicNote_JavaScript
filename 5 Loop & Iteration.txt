@@ -1,0 +1,88 @@
+
+*** FOR LOOP ***
+
+for (var i = 0; i < 10; i++) {
+	console.log(i);
+}
+
+/*
+i=0, 0 < 10 TRUE, print 0, update i = 1,
+i=1, 1 < 10 TRUE, print 1, update i = 2, dst
+...
+i=9, 9 < 10 TRUE, print 9, update i = 10,
+i=10, 10 < 10 FALSE, stop LOOP
+*/
+
+
+====================================================
+
+
+var nama = ['Andi','Budi','Caca','Deni'];
+
+for (var i = 0; i < nama.length; i++) {
+	console.log(nama[i]);
+}
+
+// output: Andi , Budi , Caca , Deni
+
+for (var i = nama.length - 1; i >= 0; i--) {
+	console.log(nama[i]);
+}
+
+// output: Deni , Caca , Budi , Andi  
+
+
+====================================================
+
+
+*** WHILE LOOP ***
+
+var i = 0;
+while (i < 10) {
+	console.log(i);
+	i++;
+}
+
+
+====================================================
+
+
+*** BREAK & CONTINUE ***
+
+for (var i = 1; i <= 5; i++) {
+	console.log(i);
+
+	if (i === 3) {
+	break;            //stop loop saat i = 3
+	}
+}
+
+// output: 1 , 2 , 3 
+
+
+for (var i = 1; i <= 5; i++) {
+
+	if (i === 3) {
+	continue;        //skip i = 3
+	}
+
+	console.log(i);
+}
+
+// output: 1 , 2 , 4 , 5 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

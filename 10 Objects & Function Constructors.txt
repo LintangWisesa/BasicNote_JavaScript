@@ -1,0 +1,55 @@
+
+// Function Constructor
+
+var andi = {
+    nama: 'Andi',
+    lahir: 1991,
+    job: 'PNS'
+};
+
+var Orang = function(nama, lahir, job) {
+    this.nama = nama;
+    this.lahir = lahir;
+    this.job = job;
+}
+
+var budi = new Orang('Budi', 1992, 'Wiraswasta');
+
+
+==============================================
+
+// Inheritance
+
+var andi = {
+    nama: 'Andi',
+    lahir: 1991,
+    job: 'PNS'
+};
+
+var Orang = function(nama, lahir, job) {
+    this.nama = nama;
+    this.lahir = lahir;
+    this.job = job;
+}
+
+Orang.prototype.usia = function() {
+	console.log(2017 - this.lahir);
+    };
+
+Orang.prototype.marga = 'Hasibuan';
+
+var budi = new Orang('Budi', 1992, 'Wiraswasta');
+var caca = new Orang('Caca', 2005, 'Pelajar');
+var dedi = new Orang('Dedi', 1988, 'Guru');
+
+budi.usia();
+caca.usia();
+dedi.usia();
+
+console.log(budi.marga);
+console.log(caca.marga);
+console.log(dedi.marga);
+
+
+
+

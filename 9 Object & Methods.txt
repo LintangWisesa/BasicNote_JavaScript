@@ -1,0 +1,68 @@
+
+// var namaObject = {
+   	key1: value1,   --> pasangan key & value disebut PROPERTY
+	key2: value2,
+	key3: function(){} --> key yg isinya func dsebut METHOD
+   	}
+
+
+var andi = {
+	lahir: 1992,
+	saudara: ['Budi','Caca','Deni'],
+	hitungUsia: function(lahir){
+		return 2017 - lahir;
+	}
+};
+
+console.log(andi);
+
+console.log(andi.saudara);    //output:['Budi','Caca','Deni']
+
+console.log(andi.saudara[0]); //output: Budi
+
+console.log(andi.hitungUsia(1990));  //output: 27 (2017-1990)
+
+=============================================================
+
+var andi = {
+	thLahir: 1992,
+	saudara: ['Budi','Caca','Deni'],
+	hitungUsia: function(){
+		return 2017 - this.thLahir; //this.thLahir = andi.thLahir
+	}
+};
+
+console.log(andi.hitungUsia()); //tanpa parameter
+
+=============================================================
+
+*** ADD ELEMENT TO AN OBJECT ***
+
+var andi = {
+	thLahir: 1992,
+	saudara: ['Budi','Caca','Deni'],
+	hitungUsia: function(){
+		return 2017 - this.thLahir;
+	}
+};
+
+var usia = andi.hitungUsia();
+andi.usia = usia;
+
+console.log(andi);   //pada object Andi akan ada elemen usia
+
+=============================================================
+
+*** ADD ELEMENT TO AN OBJECT ***
+
+var andi = {
+	thLahir: 1992,
+	saudara: ['Budi','Caca','Deni'],
+	hitungUsia: function(){
+		this.usia = return 2017 - this.thLahir; //langsung bikin key usia
+	}
+};
+
+andi.hitungUsia();
+console.log(andi);   //pada object Andi akan ada elemen usia
+

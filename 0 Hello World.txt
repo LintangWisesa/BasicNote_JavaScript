@@ -1,0 +1,27 @@
+
+// komentar single-line javascript
+
+/*
+komentar 
+multi-line 
+javascript
+*/
+
+1. di file html, js diketik di antara tag <script>:
+ 
+   	<script> 
+	  console.log('Halo Dunia');
+	</script>
+
+2. atau membuat sebuah file.js yg dpanggil di html:
+   isi dari file.js (namafile bebas): 
+
+	console.log('Halo Dunia');
+
+   lalu dipanggil di html:
+
+	<script src="file.js"></script>
+
+
+hasil js dpt dilihat di developer web page bagian CONSOLE.
+buka web page, klik kanan, INSPECT lalu klik tab CONSOLE.
